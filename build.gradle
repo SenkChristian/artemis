@@ -1,0 +1,12 @@
+apply plugin: 'java'
+apply plugin: 'gitrelease' // or apply plugin: 'svnrelease'
+
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		classpath 'no.entitas.gradle:gradle-release-plugin:1.16'
+	}
+}
