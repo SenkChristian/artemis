@@ -32,3 +32,13 @@ sourceSets {
 dependencies {
 	testCompile "junit:junit:4.11"
 }
+
+task sourceJar(type: Jar) {
+    classifier = 'sources'
+    baseName = 'artemis'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives sourceJar
+}
